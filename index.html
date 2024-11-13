@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DarkFLAME Industries</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            background: #111;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1506748686215-cb3c6d9be44b') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            color: rgba(255, 255, 255, 0.7);
+            text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .cta-btn {
+            padding: 15px 30px;
+            background-color: #ff7f50;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #e0603f;
+        }
+
+        /* Section Layout */
+        .section {
+            padding: 80px 20px;
+            background-color: #f7f7f7;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            width: 300px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .cta-btn {
+                padding: 10px 20px;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Button Styling */
+        .button-container {
+            text-align: center; /* Center the button */
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #4CAF50;  /* Green background */
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 30px;
+            text-decoration: none;  /* Remove the underline */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #45a049;  /* Darker green on hover */
+            transform: scale(1.1);  /* Slightly scale up on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);  /* Increase shadow size */
+        }
+
+        .button:active {
+            transform: scale(1); /* Reset scale when clicked */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  /* Reset shadow */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div>
+            <h1>Welcome to DarkFLAME Industries</h1>
+            <p>This Website is created for establishing connection with multiple ESP32 and ESP8266 Devices</p>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="section" style="background-color: #fafafa;">
+        <h2>About Us</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="AIS.png" alt="Card Image 1">
+                <p>1) Automatic Irrigation System</p>
+            </div>
+
+            <div class="card">
+                <img src="RPG10.png" alt="Card Image 2">
+                <h3>Innovative Projects</h3>
+                <p>2) Rocket Launcher</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="section">
+        <h2>Contact Us</h2>
+        <p style="text-align: center;">View Our Projects at @darkflamex1 on youtube.com</p>
+
+        <div class="button-container">
+            <a href="https://www.youtube.com/@DarkFLAMEx1" class="button">View Projects!!</a>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 DarkFLAME Industries. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
