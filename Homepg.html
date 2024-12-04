@@ -38,16 +38,29 @@
         }
 		.B1 {
             position: absolute;
-            top: 20px; 
-            right: 20px;
+            top: 10px; 
+            left: 20px;
             border-radius: 2px;
-            background-color: rgba(0, 0, 255,0.2);
+            background-color: rgba(0, 0, 0,0.7);
             color: white;
             font-family: Arial;
             border: none;
             height: 30px;
-            width: 100px;
+            width: 200px;
             font-weight: bold;
+        }
+      .frame{
+            position: fixed;
+            height: 50vh;
+            background: rgba(0,0,0,0.8);
+            display: flex;
+            justify-content: left;
+            align-items: left;
+            text-align: left;
+            color: white;
+            padding-left: 250px;
+            padding-top: 100px
+      		width: 200px;
         }
 		
     </style>
@@ -56,8 +69,10 @@
     <div class="hero">
         <br>
         <h1 class="h1">Welcome, <br> DarkFLAME Corporation</h1>
-        <button class="B1" onclick="window.location.href='index.html'">Projects</button>
+        
 
+    </div>
+    <div class="frame"><button class="B1" onclick="window.location.href='index.html'">Projects</button>
     </div>
 </body>
 </html>
