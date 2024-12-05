@@ -1,20 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         .body {
             background-image: url('bgimagehome.jpg');
             background-size: cover;
             background-position: center; 
             background-repeat: no-repeat;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            margin: 0;
-            padding: 0;
-            height: 150vh;
+            min-height: 100vh; /* Ensures the body takes up at least 100% of the viewport height */
+            display: flex;
+            flex-direction: column; /* Stacks child elements vertically */
+            background-attachment: fixed; /* Keeps the background fixed */
         }
+
         .hero {
             position: relative;
-            height: 50vh;
+            height: 50vh; /* Sets the hero section to take up 50% of the viewport height */
             background: linear-gradient(
                 to right, 
                 rgba(0, 0, 0, 0.8) 0%, 
@@ -24,23 +31,26 @@
             );
             display: flex;
             justify-content: left;
-            align-items: left;
+            align-items: center; /* Centers the content vertically */
             text-align: left;
             color: white;
-            padding-left: 100px;
-            padding-top: 50px
+            padding-left: 30px;
+            padding-top: 50px;
         }
+
         .h1 {
             font-family: Arial, Helvetica, sans-serif;
             font-weight: bold;
             font-size: 2rem;
             color: white;
+            line-height: 1.2;
         }
-		.B1 {
+
+        .B1 {
             position: absolute;
             top: 520px; 
             left: 10px;
-		right: 10px;
+            right: 10px;
             border-radius: 2px;
             background-color: rgb(0, 0, 0);
             color: white;
@@ -51,31 +61,49 @@
             font-weight: bold;
         }
 
-	.frame {
-          flex-grow: 1;
-	  height: 80vh;
-          background: rgba(0,0,0,0.8);
-          display: flex;
-          justify-content: left;
-          align-items: left;
-          text-align: left;
-          color: white;
-          padding-left: 125px;
-          padding-top: 100px;
-          margin-top: px; /* Adds space below the hero */
-          width: 100px;
-      }
-		
+        .frame {
+            background: rgba(0,0,0,0.8);
+            display: flex;
+            justify-content: left;
+            align-items: center; /* Centers the content vertically */
+            text-align: left;
+            color: white;
+            padding-left: 125px;
+            padding-top: 100px;
+            width: 100%;
+            flex-grow: 1; /* Makes .frame take up remaining space */
+            padding-bottom: 50px; /* Adds some space at the bottom */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                height: 40vh;
+                padding-left: 20px;
+                padding-top: 30px;
+            }
+
+            .h1 {
+                font-size: 1.5rem;
+            }
+
+            .frame {
+                padding-left: 20px;
+                padding-top: 50px;
+            }
+
+            .B1 {
+                width: 150px; /* Adjust button width for small screens */
+            }
+        }
     </style>
 </head>
 <body class="body">
     <div class="hero">
-        <br>
-        <h1 class="h1">Welcome, <br> DarkFLAME Corporation</h1>
-        
-
+        <h1 class="h1">Welcome,<br> DarkFLAME Corporation</h1>
     </div>
-    <div class="frame"><button class="B1" onclick="window.location.href='index.html'">Software</button>
+    <div class="frame">
+        <button class="B1" onclick="window.location.href='index.html'">Software</button>
     </div>
 </body>
 </html>
