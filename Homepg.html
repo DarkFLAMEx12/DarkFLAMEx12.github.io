@@ -38,7 +38,7 @@
         }
 		.B1 {
             position: absolute;
-            top: 520px; 
+            top: 70vh; 
             left: 10px;
 			right: 10px;
             border-radius: 2px;
@@ -52,8 +52,8 @@
         }
 
 	.frame {
+
           flex-grow: 1;
-	  height: 80vh;
           background: rgba(0,0,0,0.8);
           display: flex;
           justify-content: left;
@@ -62,20 +62,37 @@
           color: white;
           padding-left: 125px;
           padding-top: 100px;
-          margin-top: px; /* Adds space below the hero */
           width: 100px;
+          height:400px
       }
-		
+      .text_fr{
+          	background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            width: 300px; /* Set the width of the text container */
+            margin-left: 40px;
+            margin-top: 40px;
+            height: 400px;
+      }
+	  #main {
+            width: fit-content;
+            height: fit-content;
+            display: flex;
+            flex-direction: row;
+          }
     </style>
 </head>
 <body class="body">
     <div class="hero">
         <br>
         <h1 class="h1">Welcome, <br> DarkFLAME Corporation</h1>
-        
-
-    </div>
+        </div>
+    <div id="main">
     <div class="frame"><button class="B1" onclick="window.location.href='index.html'">Software</button>
+    </div>
+    <div class="text_fr">
+    <p>Hello</p>
+    </div>
     </div>
 </body>
 </html>
